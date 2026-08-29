@@ -8,8 +8,17 @@ password = input("Enter your password: ")
 password_bytes = password.encode("utf-8")
 sha_512 = hashlib.sha512(password_bytes).hexdigest()
 
-print("----------------------USER INFORMATION---------------------------------")
-print("\n")
-print(f"Your Full name: {First_name} {Surname}")
-print(f"Your Email: {Email}")
-print(f"Your password: {sha_512}")
+
+user_info = f'''print("----------------------USER INFORMATION---------------------------------")
+    
+    "Your Full name: {First_name} {Surname}"
+    "Your Email: {Email}"
+    "Your password: {sha_512}"
+
+'''
+    
+
+with open("user_info.log", "w") as f:
+    f.write(user_info)
+
+print(user_info)
